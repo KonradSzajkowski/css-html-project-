@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+	<head>
+		<title>PSI</title>
+		<meta name="author" content="MZ">
+		<meta name="keywords" content="HTML,CSS">
+		<meta name="description" content="Strona PSI">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	
+		<div id="container">
+			<div id="menu">
+				
+				<div class="pasek">
+					<a href="index.html"><div class="menuButton" >O MNIE</div></a>
+				</div>
+				
+				<div class="pasek">
+					<div class="menuButton" id="menuButton2">TECHNOLOGIE</div>
+					<div id="dropdown2">
+					<a href="html5.html"><div class="hiddenbutton">HTML5</div> </a>
+					<a href="css.html"><div class="hiddenbutton">CSS</div> </a>
+					<a href="javascript.html"><div class="hiddenbutton">JAVASCRIPT</div> </a>
+					<a href="jquery.html"><div class="hiddenbutton">JQUERY</div> </a>
+					<a href="bootstrap.html"><div class="hiddenbutton">BOOTSTRAP</div> </a>
+					</div>
+				</div >
+				
+				<div class="pasek">
+					<a href="kalkulator.html"><div class="menuButton" >KALKULATOR</div> </a>
+				</div>
+				
+				<div class="pasek">
+					<a href="formularz.html"><div class="menuButton" >FORMULARZ</div> </a>
+				</div>
+				
+				<div class="pasek">
+					<a href="gra.html"><div class="menuButton" >GRA</div> </a>
+				</div>
+				
+				<div class="pasek">
+					<a href="slider.html"><div class="menuButton" >SLIDER</div>  </a>
+				</div>
+				
+				<div class="pasek">
+					<a href="k-index.html"><div class="menuButton" >KOSZYK</div>  </a>
+				</div>
+				
+			</div>
+				
+				
+			<div class="fl"></div>			
+				
+			</div>
+			<div class="fl"></div>
+				
+			<div id="container">
+				<div id="container">
+					koszyk
+				</div>
+				<div class="pasek">
+					<a href="k-index.html"><div class="menuButton" >HOME</div> </a>
+				</div>
+				
+				<div class="pasek">
+					<a href="k-koszyk.html"><div class="menuButton" >KOSZYK</div>  </a>
+				</div>
+				
+				<div class="pasek">
+					<a href="k-sklep.html"><div class="menuButton" >SKLEP</div>  </a>
+				</div>
+				<div class="fl"></div>
+				
+		
+				<script>
+					
+						for( i = 0 ; i<localStorage.getItem('amount'); i++){
+							var div = document.createElement("div");
+							div.style.width = "1000px";
+							div.style.height = "50px";
+							div.style.background = "black";
+							div.style.color = "white";
+							//div.style.margin-top= "100px"; 
+							div.innerHTML = localStorage.getItem('fruit'+(i+1));
+							document.getElementById("container").appendChild(div);
+						}	
+				</script>
+			</div>
+			
+		
+		
+		
+		<script>
+			
+
+			
+			$("#menuButton2").click(function(event) {
+				var x = document.getElementById("dropdown2");
+				if (x.style.visibility === 'hidden') {
+					x.style.visibility = 'visible';
+				} else {
+					x.style.visibility = 'hidden';
+				}
+			})
+			
+			$("#menuButton3").click(function(event) {
+				var x = document.getElementById("dropdown3");
+				if (x.style.visibility === 'hidden') {
+					x.style.visibility = 'visible';
+				} else {
+					x.style.visibility = 'hidden';
+				}
+			})
+			
+		</script>
+		
+	</body>
+</html>
